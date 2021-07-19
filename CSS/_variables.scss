@@ -1,0 +1,26 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+$Font-Stack: 'Bai Jamjuree', sans-serif;
+
+$Font-body: 1.8rem;
+
+$Font-btn: 1.2rem;
+
+// Primary Color
+$Light-blue: hsl(233, 100%, 69%);
+$Strong-cyan: hsl(171, 66%, 44%);
+// Neutral Color 
+$Dark-Grayish-Blue: hsl(210, 10%, 33%);
+$Grayish-Blue: hsl(201, 11%, 66%);
+
+// Media Queries***
+
+// medium Tablets 
+$screen-md-min: 768px;
+
+// large tablets and small desktops
+$screen-lg-min: 992px;
+
+// Big Tablets and Desktops
+$screen-xl-min: 1200px;

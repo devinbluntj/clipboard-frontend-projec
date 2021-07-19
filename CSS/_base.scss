@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $Font-Stack;
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    font-size: $Font-body;
+    font-weight: 400;
+}
+
+h1, h2 {
+    color: $Dark-Grayish-Blue;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem; 
+}
+
+p {
+    color: $Grayish-Blue;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+section {
+    padding: 0 3rem;
+    padding-bottom: 10rem;
+} 
+
+//Header 
+
+%mobile-img {
+    background-image: url('../images/bg-header-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin desktop-img {
+    background-image: url('../images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+// Media Queries***
+
+// medium devices
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// large devices
+@mixin lg {
+    @media (min-width: $screen-lg-min) {
+        @content;
+    }
+}
+
+// Big devices
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+}
+
+%section-txt {
+    text-align: center;
+    padding-bottom: 2.5rem;
+
+    h1 {
+        padding-bottom: 1.5rem;        
+    }
+
+    p {
+        // large devices
+        @include lg {
+            width: 65rem;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+

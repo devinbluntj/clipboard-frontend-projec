@@ -1,0 +1,362 @@
+// Header
+
+header {
+    @extend %mobile-img;
+
+    img {
+        padding: 20% 0;
+        margin: 0 auto;
+        display: block;
+    }
+
+    // large devices
+    @include lg {
+        @include desktop-img;
+        img {
+            padding: 10% 0;
+        }
+    }
+
+    // big devices
+    @include xl {
+            @include desktop-img;
+        img {
+            padding: 10% 0;
+        }
+    }
+}
+
+// Section 1
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+
+    .sec-1-txt {
+        @extend %section-txt;
+    }
+    
+    .sec-1-btn {
+        align-self: center;
+
+        .btn-div {
+            @extend %btn-div;
+        }
+
+        // large devices
+        @include lg {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+}
+
+// Section 2 
+
+.section-2 {
+
+    .sec-2-txt {
+        text-align: center;
+
+        p {
+            // medium devices 
+            @include md {
+                width: 50rem;
+                margin: 0 auto;
+            }
+
+            // large devices
+            @include lg {
+                width: 65rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .sec-2-flex {
+        padding-top: 6rem;
+
+        .sec-2-img {
+            img {
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+
+                // large devices
+                @include lg {
+                    transform: translateX(-10%);
+                }
+            }
+
+            
+        }
+
+        .sec-2-flex-txt {
+
+            .flex-txt {
+                padding-top: 6rem;
+                text-align: center;
+
+                // medium devices 
+                @include md {
+                    width: 50%;
+                    margin: 0 auto;
+                }
+
+                // large devices
+                @include lg {
+                    text-align: left;
+                    width: 65%;
+                }
+            }
+        }
+
+        // large devices
+        @include lg {
+            display: flex;
+            gap: 7.5rem;
+        }
+    }
+}
+
+
+// Section 3
+
+.section-3 {
+
+    .sec-3-txt {
+        text-align: center;
+        padding-bottom: 6rem;
+
+        p {
+
+            // medium devices 
+            @include md {
+                width: 50rem;
+                margin: 0 auto;
+            }
+
+            // large devices
+            @include lg {
+                width: 65rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .sec-3-img {
+        img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+
+            // large devices
+            @include lg{
+                width: 70%;
+            }
+        }
+    }
+}
+
+
+// Section 4 
+
+.section-4 {
+    
+    .sec-4-txt {
+        text-align: center;
+    }
+
+    .sec-4-flex {
+        padding-top: 6rem;
+        .flex4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // gap: 1.5rem;
+            padding-bottom: 4.5rem;
+
+            img {
+                padding-bottom: 3.5rem;
+                height: 7.5rem;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            p{
+                text-align: center;
+
+                // medium devices 
+                @include md {
+                    width: 50rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        // large devices
+        @include lg{
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+
+            .flex4 {
+                p {
+                    width: 30rem;
+                }
+            }
+        }
+    }
+}
+
+// Logo Section
+
+.logo-section {
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+
+        img {
+            width: initial;
+        }
+
+        // large devices
+        @include lg {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+
+// Section 5
+
+.section-5 {
+    display: flex;
+    flex-direction: column;
+    
+    .sec-5-txt {
+        @extend %section-txt;
+
+        p {
+            // medium devices 
+            @include md {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .sec-5-btn {
+        align-self: center;
+
+        .btn-div {
+            @extend %btn-div;
+        }
+
+        // large devices
+        @include lg {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }  
+    }  
+}
+
+
+// Footer 
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.5rem;
+    padding: 6rem 0;
+    background-color: rgba($color: $Grayish-Blue, $alpha: .3);
+
+    .footer-logo {
+        img {
+            width: 5rem;
+        }
+    }
+
+    .footer-links {
+        p {
+            text-align: center;
+            padding-bottom: 2rem;
+
+            cursor: pointer;
+                
+                &:hover {
+                    color: $Strong-cyan;
+                }
+        }
+    }
+
+    .social-logos {
+        display: flex;
+        gap: 3rem;
+
+        img {
+            cursor: pointer;
+            &:hover {
+                background-color: $Strong-cyan;
+            }
+        }
+    }
+
+    // large devices
+    @include lg {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-auto-rows: auto;
+        padding: 3rem 0;
+
+        .footer-logo {
+            justify-self: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 4rem;
+
+            p {
+                text-align: left;
+                color: darker;
+            }
+        }
+    }
+}
+
+
+// Attribution-div 
+
+.attribution-div {
+    background-color: rgba($color: $Grayish-Blue, $alpha: .3);
+
+    .attribution {
+        font-size: $Font-body;
+
+        a {
+            text-decoration: none;
+            color: $Strong-cyan;
+            &:hover {
+                color: rgba($color: black, $alpha: .7);
+                text-decoration: underline;
+                text-decoration-color: $Strong-cyan;
+            }
+        }
+    }
+
+    // large devices
+    @include lg {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+}

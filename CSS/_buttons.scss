@@ -1,0 +1,46 @@
+@mixin button {
+    width: 30rem;
+    height: 5rem;
+    border: 1px solid transparent;
+    border-bottom-style: outset;
+    border-bottom-width: .35rem;
+    border-radius: 5rem;
+    cursor: pointer;
+
+    // large devices
+    @include lg {
+        width: 20rem;
+        height: 5rem;
+    }
+}
+
+%btn-div {
+    padding: 1.5rem 0;
+
+    input {
+        color: white;
+        font-size: $Font-body;
+        font-family: $Font-Stack;
+        font-weight: 400;
+    }
+}
+
+// Buttons 
+.btn {
+    @include button;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.ios-btn {
+    background-color: $Strong-cyan;
+    border-bottom-color: rgba($color: $Strong-cyan, $alpha: .7);
+}
+
+.mac-btn {
+    background-color: $Light-blue;
+    border-bottom-color: rgba($color: $Light-blue, $alpha: .7);
+}
+
